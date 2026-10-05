@@ -1,0 +1,6 @@
+{
+  "name": "理科バッジマップ",
+  "description": "中学1年生のための理科基礎バッジマップ。単元ごとのスキルバッジを解き、合格・7日後の定着チャレンジで本物の定着を目指す個別演習Webアプリ。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
