@@ -2,13 +2,13 @@
   "name": "教科バッジマップ",
   "short_name": "教科バッジ",
   "description": "中学生のための5教科基礎定着マップ",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#2563eb",
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "icon.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"
