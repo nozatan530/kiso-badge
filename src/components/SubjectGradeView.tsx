@@ -162,17 +162,27 @@ export const SubjectGradeView: React.FC<SubjectGradeViewProps> = ({
                 return (
                   <div
                     key={unit.id}
-                    className="p-3.5 sm:p-4 rounded-xl border border-dashed border-slate-200 bg-slate-50/50 flex items-center justify-between gap-2 opacity-60 select-none"
+                    className="p-3.5 sm:p-4 rounded-xl border border-dashed border-slate-200 bg-slate-50/50 flex items-start justify-between gap-2 opacity-70 select-none"
                   >
-                    <div>
+                    <div className="space-y-1">
                       <span className="text-[10px] font-medium text-slate-400">
                         単元
                       </span>
                       <h4 className="text-sm font-semibold text-slate-600">
                         {unit.name}
                       </h4>
+                      {unit.badges.length > 0 && (
+                        <ul className="text-[11px] text-slate-500 space-y-0.5">
+                          {unit.badges.map((b) => (
+                            <li key={b.id}>
+                              {b.required ? '◎ ' : '・'}
+                              {b.name}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-200 text-slate-600">
+                    <span className="inline-flex shrink-0 items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-200 text-slate-600">
                       <Lock className="w-3 h-3" />
                       準備中
                     </span>

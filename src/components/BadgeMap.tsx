@@ -266,6 +266,35 @@ export const BadgeMap: React.FC<BadgeMapProps> = ({
                       );
                     }
 
+                    // 準備中の単元だけのマス：開いて、どんな単元・バッジがあるかを見られる
+                    const plannedUnitCount = CURRICULUM_DATA[subId].grades[grade].fields.reduce(
+                      (n, f) => n + f.units.length,
+                      0
+                    );
+                    if (plannedUnitCount > 0) {
+                      return (
+                        <div
+                          key={`${subId}-${grade}`}
+                          onClick={() => onSelectSubjectGrade(subId, grade)}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) =>
+                            (e.key === 'Enter' || e.key === ' ') &&
+                            onSelectSubjectGrade(subId, grade)
+                          }
+                          className="p-2.5 sm:p-4 border-r last:border-r-0 border-slate-100 bg-slate-50/30 hover:bg-slate-100/60 transition-all cursor-pointer flex flex-col justify-center items-center text-center gap-1"
+                        >
+                          <span className="text-[11px] font-medium text-slate-400 flex items-center gap-1">
+                            <Lock className="w-2.5 h-2.5" />
+                            準備中
+                          </span>
+                          <span className="text-[10px] text-slate-500">
+                            {plannedUnitCount}単元をのぞく
+                          </span>
+                        </div>
+                      );
+                    }
+
                     // Inactive cell (準備中)
                     return (
                       <div
