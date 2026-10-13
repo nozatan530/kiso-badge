@@ -1,0 +1,141 @@
+// 英語・中1（Claude の下書き。先生の確認待ち）
+import { badge, c, t } from './builders';
+
+export const G1_ENG = [
+  ...badge('eng-g1-present-b4', [
+    c('「窓を開けなさい。」を英語にしたものはどれですか。', ['Open the window.', 'You open the window.', 'Opens the window.', 'Don\'t open the window.'], 'Open the window.', '命令文は主語を言わず、動詞の原形で始める。'),
+    c('「ここで走ってはいけません。」を英語にしたものはどれですか。', ['Don\'t run here.', 'Not run here.', 'You don\'t run here.', 'Doesn\'t run here.'], 'Don\'t run here.', '「〜してはいけない」は Don\'t ＋動詞の原形。'),
+    c('「いっしょに歌いましょう。」を英語にしたものはどれですか。', ['Let\'s sing together.', 'Let\'s sings together.', 'We sing together.', 'Sing together, let\'s.'], 'Let\'s sing together.', '「〜しましょう」は Let\'s ＋動詞の原形。'),
+    c('「静かにしなさい。」を英語にしたものはどれですか。', ['Be quiet.', 'Quiet.', 'Are quiet.', 'Is quiet.'], 'Be quiet.', 'be動詞の命令文は Be で始める。'),
+    c('「どうぞ座ってください。」を英語にしたものはどれですか。', ['Please sit down.', 'Sit please down.', 'You please sit down.', 'Please sits down.'], 'Please sit down.', '命令文の前に Please をつけると、ていねいな言い方になる。'),
+  ]),
+  ...badge('eng-g1-be-verbs-b1', [
+    c('You (   ) my friend.', ['are', 'am', 'is', 'be'], 'are', '主語が you のときの be動詞は are。'),
+    c('Ken (   ) from Canada.', ['is', 'am', 'are', 'be'], 'is', '主語が3人称単数（Ken）のときの be動詞は is。'),
+    c('We (   ) in the same class.', ['are', 'am', 'is', 'be'], 'are', '主語が複数（we）のときの be動詞は are。'),
+    c('This (   ) my bag.', ['is', 'am', 'are', 'be'], 'is', 'this は3人称単数なので is。'),
+    t('My sister and I (   ) tennis players.', ['are', 'am', 'is'], 'are', [
+      ['主語が「姉と私」の2人で、複数だから', '正解！主語が複数なので are。'],
+      ['I があるので am を使うから', '主語は I だけでなく「姉と私」の2人。'],
+      ['姉は1人なので is を使うから', '主語全体は2人なので複数。'],
+    ], '主語全体が複数なら be動詞は are。'),
+  ]),
+  ...badge('eng-g1-be-verbs-b2', [
+    c('Are you a student? と聞かれて「はい」と答えるとき、正しいものはどれですか。', ['Yes, I am.', 'Yes, you are.', 'Yes, I do.', 'Yes, I is.'], 'Yes, I am.', 'Are you 〜? には I am で答える。'),
+    c('「これは私のペンではありません。」を英語にしたものはどれですか。', ['This is not my pen.', 'This not is my pen.', 'This don\'t my pen.', 'Not this is my pen.'], 'This is not my pen.', 'be動詞の否定文は、be動詞のあとに not を置く。'),
+    c('Is she your teacher? と聞かれて「いいえ」と答えるとき、正しいものはどれですか。', ['No, she isn\'t.', 'No, she doesn\'t.', 'No, I\'m not.', 'No, she not.'], 'No, she isn\'t.', 'Is she 〜? には she is / she isn\'t で答える。'),
+    c('「あなたはおなかがすいていますか。」を英語にしたものはどれですか。', ['Are you hungry?', 'You are hungry?', 'Do you hungry?', 'Is you hungry?'], 'Are you hungry?', 'be動詞の疑問文は、be動詞を主語の前に出す。'),
+    t('「彼はサッカー選手ではありません。」を英語にしたものはどれですか。', ['He is not a soccer player.', 'He don\'t a soccer player.', 'Not he is a soccer player.'], 'He is not a soccer player.', [
+      ['be動詞の文の否定文は、be動詞のあとに not を置くから', '正解！'],
+      ['否定文には、いつも don\'t を使うから', 'don\'t は一般動詞の否定文で使う。be動詞の文では使わない。'],
+      ['not は文の最初に置くから', 'not は be動詞のすぐあとに置く。'],
+    ], 'be動詞の否定文：主語＋be動詞＋not 〜.'),
+  ]),
+  ...badge('eng-g1-be-verbs-b3', [
+    c('This is (   ) bag.（私の）', ['my', 'I', 'me', 'mine'], 'my', '「私の」は my。後ろに名詞が続く。'),
+    c('I like (   ).（彼を）', ['him', 'he', 'his', 'he\'s'], 'him', '「彼を」は him。動詞のあとは目的格。'),
+    c('This pen is (   ).（彼女のもの）', ['hers', 'her', 'she', 'she\'s'], 'hers', '「彼女のもの」は hers。'),
+    c('(   ) are my friends.（彼らは）', ['They', 'Them', 'Their', 'Theirs'], 'They', '「彼らは」は they。主語になる形。'),
+    c('Do you know (   )?（私たちを）', ['us', 'we', 'our', 'ours'], 'us', '「私たちを」は us。'),
+  ]),
+  ...badge('eng-g1-wh-questions-b1', [
+    c('(   ) is this? — It\'s a camera.', ['What', 'Who', 'Where', 'When'], 'What', '「これは何ですか」は What is this?'),
+    c('(   ) do you live? — In Kochi.', ['Where', 'What', 'When', 'Who'], 'Where', '場所をたずねるときは Where。'),
+    c('(   ) is that girl? — She is Aya.', ['Who', 'What', 'Where', 'Which'], 'Who', '人をたずねるときは Who。'),
+    c('(   ) is your birthday? — It\'s May 5.', ['When', 'Where', 'Who', 'How'], 'When', '時（日付など）をたずねるときは When。'),
+    c('(   ) bag is this? — It\'s Ken\'s.', ['Whose', 'Who', 'Which', 'What'], 'Whose', '「だれの」は Whose。'),
+  ]),
+  ...badge('eng-g1-wh-questions-b2', [
+    c('(   ) many dogs do you have? — I have two.', ['How', 'What', 'Which', 'Who'], 'How', '数をたずねるときは How many ＋名詞の複数形。'),
+    c('How (   ) is this cap? — It\'s 1,500 yen.', ['much', 'many', 'old', 'long'], 'much', '値段をたずねるときは How much。'),
+    c('How (   ) are you? — I\'m thirteen.', ['old', 'much', 'many', 'tall'], 'old', '年齢をたずねるときは How old。'),
+    c('「あなたは何冊の本を持っていますか。」を英語にしたものはどれですか。', ['How many books do you have?', 'How much books do you have?', 'How many book do you have?', 'What many books do you have?'], 'How many books do you have?', 'How many のあとの名詞は複数形にする。'),
+    c('(   ) do you go to school? — By bus.', ['How', 'What', 'Where', 'When'], 'How', '手段・方法をたずねるときは How。'),
+  ]),
+  ...badge('eng-g1-wh-questions-b3', [
+    c('What time is it? の答えとして正しいものはどれですか。', ['It\'s seven thirty.', 'Yes, it is.', 'It\'s Monday.', 'It\'s sunny.'], 'It\'s seven thirty.', '時刻をたずねられているので、時刻で答える。'),
+    c('Where is my bag? の答えとして正しいものはどれですか。', ['It\'s on the desk.', 'Yes, it is.', 'It\'s blue.', 'It\'s mine.'], 'It\'s on the desk.', '場所をたずねられているので、場所で答える。'),
+    c('Who is that man? の答えとして正しいものはどれですか。', ['He is our new teacher.', 'Yes, he is.', 'It is a pen.', 'He is in the gym.'], 'He is our new teacher.', 'だれかをたずねられているので、その人がだれかを答える。'),
+    c('Which do you like, dogs or cats? の答えとして正しいものはどれですか。', ['I like cats.', 'Yes, I do.', 'No, I don\'t.', 'I like.'], 'I like cats.', 'どちらかをたずねられているので、選んだほうを答える。'),
+    t('What do you do after school? の答えとして正しいものはどれですか。', ['I play soccer.', 'Yes, I do.', 'No, I don\'t.'], 'I play soccer.', [
+      ['疑問詞の疑問文には Yes / No ではなく、たずねられた内容を答えるから', '正解！'],
+      ['疑問文には、いつも Yes か No で答えるから', '疑問詞で始まる疑問文には、Yes / No では答えない。'],
+      ['do で聞かれたら、do で答えるから', 'Yes, I do. は、Do you 〜? のような疑問詞のない疑問文の答え方。'],
+    ], '疑問詞の疑問文には、具体的な内容で答える。'),
+  ]),
+  ...badge('eng-g1-can-b1', [
+    c('「私はピアノをひくことができます。」を英語にしたものはどれですか。', ['I can play the piano.', 'I can plays the piano.', 'I play can the piano.', 'I can playing the piano.'], 'I can play the piano.', 'can のあとの動詞は原形。'),
+    c('She can (   ) English well.', ['speak', 'speaks', 'speaking', 'to speak'], 'speak', '主語が3人称単数でも、can のあとは原形。'),
+    c('「彼は泳ぐことができません。」を英語にしたものはどれですか。', ['He can\'t swim.', 'He doesn\'t can swim.', 'He can swims not.', 'He not can swim.'], 'He can\'t swim.', 'can の否定文は can\'t（cannot）＋動詞の原形。'),
+    c('Can you ski? と聞かれて「はい」と答えるとき、正しいものはどれですか。', ['Yes, I can.', 'Yes, I do.', 'Yes, I am.', 'Yes, you can.'], 'Yes, I can.', 'Can 〜? には can を使って答える。'),
+    t('Ken can plays tennis. という文は正しいですか。', ['正しくない', '正しい'], '正しくない', [
+      ['can のあとの動詞は、主語が3人称単数でも原形にするから', '正解！正しくは Ken can play tennis.'],
+      ['Ken は3人称単数なので s が必要だから', 'can があるときは、動詞に s をつけない。'],
+      ['can は文の最後に置くから', 'can は動詞の前に置く。'],
+    ], 'can ＋動詞の原形。'),
+  ]),
+  ...badge('eng-g1-progressive-b1', [
+    c('I am (   ) TV now.', ['watching', 'watch', 'watches', 'watched'], 'watching', '現在進行形は be動詞＋〜ing。'),
+    c('run の ing形はどれですか。', ['running', 'runing', 'runnning', 'runs'], 'running', '〈短母音＋子音字〉で終わる語は、子音字を重ねて ing。'),
+    c('make の ing形はどれですか。', ['making', 'makeing', 'makking', 'makes'], 'making', 'e で終わる語は、e をとって ing。'),
+    c('「彼女は今、手紙を書いています。」を英語にしたものはどれですか。', ['She is writing a letter now.', 'She writing a letter now.', 'She is write a letter now.', 'She writes a letter now.'], 'She is writing a letter now.', 'be動詞＋〜ing。write は e をとって writing。'),
+    c('Are you studying now? と聞かれて「いいえ」と答えるとき、正しいものはどれですか。', ['No, I\'m not.', 'No, I don\'t.', 'No, I wasn\'t.', 'No, you aren\'t.'], 'No, I\'m not.', '進行形の疑問文には be動詞を使って答える。'),
+  ]),
+  ...badge('eng-g1-progressive-b2', [
+    c('I (   ) tennis every Sunday.', ['play', 'am playing', 'playing', 'plays'], 'play', '毎週の習慣なので現在形。'),
+    c('Look! The dog (   ) in the park.', ['is running', 'runs', 'run', 'running'], 'is running', '「見て！」と今まさに起きていることなので現在進行形。'),
+    c('I (   ) up at seven every morning.', ['get', 'am getting', 'getting', 'gets'], 'get', '毎朝の習慣なので現在形。'),
+    c('Listen! Someone (   ) the piano.', ['is playing', 'plays', 'play', 'playing'], 'is playing', '「聞いて！」と今まさにしていることなので現在進行形。'),
+    t('My brother (   ) soccer now.', ['is playing', 'plays', 'play'], 'is playing', [
+      ['now があり、今まさにしている動作だから', '正解！'],
+      ['毎日する習慣だから', '習慣なら現在形（plays）。この文には now がある。'],
+      ['主語が3人称単数なので plays にするから', '3人称単数でも、今していることを表すときは is playing。'],
+    ], '習慣は現在形、今していることは現在進行形。'),
+  ]),
+  ...badge('eng-g1-past-b1', [
+    c('play の過去形はどれですか。', ['played', 'plaied', 'playd', 'plays'], 'played', 'ふつうは ed をつける。'),
+    c('study の過去形はどれですか。', ['studied', 'studyed', 'studed', 'studys'], 'studied', '〈子音字＋y〉で終わる語は、y を i にかえて ed。'),
+    c('stop の過去形はどれですか。', ['stopped', 'stoped', 'stopd', 'stops'], 'stopped', '〈短母音＋子音字〉で終わる語は、子音字を重ねて ed。'),
+    c('live の過去形はどれですか。', ['lived', 'liveed', 'livd', 'lives'], 'lived', 'e で終わる語は d だけをつける。'),
+    c('I (   ) TV last night.', ['watched', 'watch', 'watches', 'watching'], 'watched', 'last night（昨夜）があるので過去形。'),
+  ]),
+  ...badge('eng-g1-past-b2', [
+    c('go の過去形はどれですか。', ['went', 'goed', 'gone', 'goes'], 'went', 'go は不規則動詞。'),
+    c('see の過去形はどれですか。', ['saw', 'seed', 'seen', 'sees'], 'saw', 'see は不規則動詞。'),
+    c('have の過去形はどれですか。', ['had', 'haved', 'has', 'have'], 'had', 'have は不規則動詞。'),
+    c('come の過去形はどれですか。', ['came', 'comed', 'come', 'comes'], 'came', 'come は不規則動詞。'),
+    c('I (   ) a book yesterday.（read の過去形）', ['read', 'readed', 'reads', 'reading'], 'read', 'read の過去形はつづりが同じ read。発音は「レッド」。'),
+  ]),
+  ...badge('eng-g1-past-b3', [
+    c('(   ) you play tennis yesterday?', ['Did', 'Do', 'Are', 'Were'], 'Did', '一般動詞の過去の疑問文は Did で始める。'),
+    c('「私は昨日、宿題をしませんでした。」を英語にしたものはどれですか。', ['I didn\'t do my homework yesterday.', 'I don\'t did my homework yesterday.', 'I didn\'t did my homework yesterday.', 'I wasn\'t do my homework yesterday.'], 'I didn\'t do my homework yesterday.', '過去の否定文は didn\'t ＋動詞の原形。'),
+    c('Did she go to the park? と聞かれて「はい」と答えるとき、正しいものはどれですか。', ['Yes, she did.', 'Yes, she does.', 'Yes, she went.', 'Yes, she was.'], 'Yes, she did.', 'Did 〜? には did を使って答える。'),
+    c('He didn\'t (   ) breakfast.', ['eat', 'ate', 'eats', 'eating'], 'eat', 'didn\'t のあとの動詞は原形。'),
+    t('Did you went to school? という文は正しいですか。', ['正しくない', '正しい'], '正しくない', [
+      ['did を使った疑問文では、動詞は原形にするから', '正解！正しくは Did you go to school?'],
+      ['過去の文なので、動詞も過去形にするから', 'did が過去を表しているので、動詞は原形にもどす。'],
+      ['did は現在の文で使うから', 'did は過去の疑問文・否定文で使う。'],
+    ], 'Did ＋主語＋動詞の原形 〜?'),
+  ]),
+  ...badge('eng-g1-past-b4', [
+    c('I (   ) tired yesterday.', ['was', 'were', 'am', 'did'], 'was', '主語が I のときの be動詞の過去形は was。'),
+    c('They (   ) in Tokyo last week.', ['were', 'was', 'are', 'did'], 'were', '主語が複数のときの be動詞の過去形は were。'),
+    c('(   ) you busy last night?', ['Were', 'Was', 'Did', 'Are'], 'Were', '主語が you のときは were。疑問文は be動詞を前に出す。'),
+    c('「彼女は家にいませんでした。」を英語にしたものはどれですか。', ['She wasn\'t at home.', 'She didn\'t at home.', 'She weren\'t at home.', 'She isn\'t at home.'], 'She wasn\'t at home.', 'be動詞の過去の否定文は wasn\'t / weren\'t。'),
+    c('It (   ) sunny yesterday.', ['was', 'were', 'is', 'did'], 'was', 'yesterday があるので過去形。主語が it なので was。'),
+  ]),
+  ...badge('eng-g1-vocab-b1', [
+    c('library の意味はどれですか。', ['図書館', '病院', '公園', '駅'], '図書館', 'library＝図書館。'),
+    c('hospital の意味はどれですか。', ['病院', '図書館', '学校', '郵便局'], '病院', 'hospital＝病院。'),
+    c('Wednesday の意味はどれですか。', ['水曜日', '火曜日', '木曜日', '月曜日'], '水曜日', 'Wednesday＝水曜日。d は発音しない。'),
+    c('beautiful の意味はどれですか。', ['美しい', '大きい', '新しい', '古い'], '美しい', 'beautiful＝美しい。'),
+    c('favorite の意味はどれですか。', ['お気に入りの', 'ふつうの', 'むずかしい', '有名な'], 'お気に入りの', 'favorite＝お気に入りの、いちばん好きな。'),
+  ]),
+  ...badge('eng-g1-vocab-b2', [
+    c('「火曜日」の正しいつづりはどれですか。', ['Tuesday', 'Tusday', 'Teusday', 'Tuseday'], 'Tuesday', 'Tuesday（Tue-s-day）。'),
+    c('「2月」の正しいつづりはどれですか。', ['February', 'Febuary', 'Februaly', 'Feburary'], 'February', 'February は r を2回書く。'),
+    c('「友だち」の正しいつづりはどれですか。', ['friend', 'freind', 'frend', 'friendo'], 'friend', 'friend は i が e の前。'),
+    c('「美しい」の正しいつづりはどれですか。', ['beautiful', 'beutiful', 'beatiful', 'beautifull'], 'beautiful', 'beau-ti-ful。l は1つ。'),
+    c('「12」の正しいつづりはどれですか。', ['twelve', 'twelv', 'tweleve', 'twelfe'], 'twelve', 'twelve＝12。'),
+  ]),
+];

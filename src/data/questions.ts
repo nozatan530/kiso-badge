@@ -1,4 +1,9 @@
 import { Question } from '../types';
+import { G1_JPN } from './questions/g1-jpn';
+import { G1_SOC } from './questions/g1-soc';
+import { G1_MATH } from './questions/g1-math';
+import { G1_SCI } from './questions/g1-sci';
+import { G1_ENG } from './questions/g1-eng';
 
 export const DENSITY_TABLE_DATA = [
   { name: '水', density: 1.00 },
@@ -1911,4 +1916,11 @@ export const QUESTIONS_DATABASE: Question[] = [
       '主語が She（三人称単数）なので、一般動詞の否定文は doesn\'t ＋ 動詞の原形を使います。',
     sample: true,
   },
+
+  // 中1の残りのバッジ（Claude の下書き。先生の確認待ち）
+  ...G1_JPN,
+  ...G1_SOC,
+  ...G1_MATH,
+  ...G1_SCI,
+  ...G1_ENG,
 ];

@@ -11,6 +11,8 @@ import {
 
 // 単元とバッジの一覧は docs/badge-catalog.md（学習指導要領にもとづくたたき台）から作っている。
 // open: false の単元は「準備中」。問題（questions.ts）を入れてから open: true にする。
+// 単元とバッジの一覧は docs/badge-catalog.md（学習指導要領にもとづくたたき台）から作っている。
+// open: false の単元は「準備中」。問題（questions.ts）を入れてから open: true にする（中1は全単元に問題あり）。
 export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
   jpn: {
     id: 'jpn',
@@ -37,7 +39,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'jpn-g1-kanji',
                 name: '漢字',
                 ref: '国語 第1学年〔知識及び技能〕⑴イ',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'jpn-g1-kanji-b1',
@@ -55,7 +57,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'jpn-g1-vocab',
                 name: '語彙',
                 ref: '国語 第1学年〔知識及び技能〕⑴ウ',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'jpn-g1-vocab-b1',
@@ -94,13 +96,23 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                     required: false,
                     description: '動詞・形容詞・形容動詞・副詞などの品詞の性質を見分ける。',
                   },
+                  {
+                    id: 'jpn-g1-wordclass-b4',
+                    name: '指示する語句（こそあど言葉）が指す内容がわかる',
+                    required: false,
+                  },
+                  {
+                    id: 'jpn-g1-wordclass-b5',
+                    name: '接続する語句の働き（順接・逆接・並立・添加・対比・説明・転換）がわかる',
+                    required: false,
+                  },
                 ],
               },
               {
                 id: 'jpn-g1-expression',
                 name: '表現の技法',
                 ref: '国語 第1学年〔知識及び技能〕⑴オ',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'jpn-g1-expression-b1',
@@ -124,7 +136,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'jpn-g1-info-relation',
                 name: '情報と情報の関係',
                 ref: '国語 第1学年〔知識及び技能〕⑵ア・イ',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'jpn-g1-info-relation-b1',
@@ -153,7 +165,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'jpn-g1-classic-intro',
                 name: '古典の入り口',
                 ref: '国語 第1学年〔知識及び技能〕⑶ア・イ・ウ',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'jpn-g1-classic-intro-b1',
@@ -568,13 +580,28 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                     required: false,
                     description: '経度15度で1時間の時差をもとに、世界各地の時刻や時差を求める。',
                   },
+                  {
+                    id: 'soc-g1-world-b4',
+                    name: '主な国の名前と位置がわかる',
+                    required: false,
+                  },
+                  {
+                    id: 'soc-g1-world-b5',
+                    name: '日本の位置と領域（領土・領海・排他的経済水域）がわかる',
+                    required: false,
+                  },
+                  {
+                    id: 'soc-g1-world-b6',
+                    name: '都道府県の名前・位置と、都道府県庁所在地がわかる',
+                    required: true,
+                  },
                 ],
               },
               {
                 id: 'soc-g1-world-life',
                 name: '世界各地の人々の生活と環境',
                 ref: '社会 地理的分野 B⑴',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'soc-g1-world-life-b1',
@@ -602,7 +629,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'soc-g1-world-regions',
                 name: '世界の諸地域',
                 ref: '社会 地理的分野 B⑵',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'soc-g1-world-regions-b1',
@@ -646,7 +673,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'soc-g1-history-intro',
                 name: '私たちと歴史',
                 ref: '社会 歴史的分野 A⑴',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'soc-g1-history-intro-b1',
@@ -669,7 +696,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'soc-g1-japan-ancient',
                 name: '古代までの日本',
                 ref: '社会 歴史的分野 B⑴',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'soc-g1-japan-ancient-b1',
@@ -1186,13 +1213,28 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                     required: true,
                     description: '正の数・負の数のかけ算とわり算、および複数の数の乗除計算をする。',
                   },
+                  {
+                    id: 'math-g1-integers-b4',
+                    name: '四則の混じった計算（累乗・かっこをふくむ）ができる',
+                    required: false,
+                  },
+                  {
+                    id: 'math-g1-integers-b5',
+                    name: '正の数・負の数を使って、具体的な場面を表せる（基準との差・平均）',
+                    required: false,
+                  },
+                  {
+                    id: 'math-g1-integers-b6',
+                    name: '素数と素因数分解がわかる',
+                    required: false,
+                  },
                 ],
               },
               {
                 id: 'math-g1-algebraic',
                 name: '文字を用いた式',
                 ref: '数学 第1学年 A⑵',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'math-g1-algebraic-b1',
@@ -1225,7 +1267,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'math-g1-equations',
                 name: '一元一次方程式',
                 ref: '数学 第1学年 A⑶',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'math-g1-equations-b1',
@@ -1259,7 +1301,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'math-g1-plane-geom',
                 name: '平面図形',
                 ref: '数学 第1学年 B⑴',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'math-g1-plane-geom-b1',
@@ -1283,7 +1325,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'math-g1-space-geom',
                 name: '空間図形',
                 ref: '数学 第1学年 B⑵',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'math-g1-space-geom-b1',
@@ -1322,7 +1364,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'math-g1-proportions',
                 name: '比例と反比例',
                 ref: '数学 第1学年 C⑴',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'math-g1-proportions-b1',
@@ -1356,7 +1398,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'math-g1-data-dist',
                 name: 'データの分布',
                 ref: '数学 第1学年 D⑴',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'math-g1-data-dist-b1',
@@ -1380,7 +1422,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'math-g1-probability',
                 name: '不確定な事象の起こりやすさ',
                 ref: '数学 第1学年 D⑵',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'math-g1-probability-b1',
@@ -1877,7 +1919,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'sci-g1-energy-phenomena',
                 name: '身近な物理現象：光と音',
                 ref: '理科 第1分野⑴ア',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'sci-g1-energy-phenomena-b1',
@@ -1910,7 +1952,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'sci-g1-force',
                 name: '身近な物理現象：力の働き',
                 ref: '理科 第1分野⑴イ',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'sci-g1-force-b1',
@@ -1977,6 +2019,26 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                     required: false,
                     description: '温度による溶解度の違いをグラフや表から読み取り、析出する結晶の量を求める。',
                   },
+                  {
+                    id: 'sci-g1-substance-b6',
+                    name: '物質の分類（有機物と無機物、金属の性質）がわかる',
+                    required: false,
+                  },
+                  {
+                    id: 'sci-g1-substance-b7',
+                    name: '気体の性質と集め方（酸素・二酸化炭素・水素・アンモニアなど）がわかる',
+                    required: false,
+                  },
+                  {
+                    id: 'sci-g1-substance-b8',
+                    name: '状態変化と、体積・質量の変化がわかる',
+                    required: false,
+                  },
+                  {
+                    id: 'sci-g1-substance-b9',
+                    name: '融点・沸点と、蒸留による分け方がわかる',
+                    required: false,
+                  },
                 ],
               },
             ],
@@ -1989,7 +2051,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'sci-g1-life-organisms',
                 name: 'いろいろな生物とその共通点',
                 ref: '理科 第2分野⑴',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'sci-g1-life-organisms-b1',
@@ -2033,7 +2095,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'sci-g1-earth-formation',
                 name: '大地の成り立ちと変化',
                 ref: '理科 第2分野⑵',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'sci-g1-earth-formation-b1',
@@ -2623,7 +2685,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'eng-g1-be-verbs',
                 name: 'be動詞',
                 ref: '外国語〔英語〕 2⑴エ（小学校の内容をふくむ）',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'eng-g1-be-verbs-b1',
@@ -2667,13 +2729,18 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                     required: false,
                     description: 'does / doesn\'t を用いて疑問文と否定文をつくり、動詞を原形にする。',
                   },
+                  {
+                    id: 'eng-g1-present-b4',
+                    name: '命令文（Don\'t 〜. / Let\'s 〜.）がわかる',
+                    required: false,
+                  },
                 ],
               },
               {
                 id: 'eng-g1-wh-questions',
                 name: '疑問詞',
                 ref: '外国語〔英語〕 2⑴エ（文法事項 a、文 b）',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'eng-g1-wh-questions-b1',
@@ -2696,7 +2763,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'eng-g1-can',
                 name: 'can',
                 ref: '外国語〔英語〕 2⑴エ（文法事項 c）',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'eng-g1-can-b1',
@@ -2709,7 +2776,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'eng-g1-progressive',
                 name: '現在進行形',
                 ref: '外国語〔英語〕 2⑴エ（文法事項 e）',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'eng-g1-progressive-b1',
@@ -2727,7 +2794,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'eng-g1-past',
                 name: '過去形',
                 ref: '外国語〔英語〕 2⑴エ（文法事項 e）',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'eng-g1-past-b1',
@@ -2761,7 +2828,7 @@ export const CURRICULUM_DATA: Record<SubjectId, SubjectCurriculum> = {
                 id: 'eng-g1-vocab',
                 name: '中1の単語',
                 ref: '外国語〔英語〕 2⑴ウ',
-                open: false,
+                open: true,
                 badges: [
                   {
                     id: 'eng-g1-vocab-b1',
